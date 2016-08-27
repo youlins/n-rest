@@ -1,0 +1,25 @@
+{
+	"article-type" : {
+		"title":"type of articles",
+		"singular":"article-type",
+		"plural":"article-types",
+		"table_name":"tb_article_type",
+		"fields": {
+			"id":             		{ "type": "uuid", "autoCreate": true, "isPrimaryKey" : true},
+			"type_name":    		{ "type": "string", "nullable" : false, "maxSize" : 20, "title":"article type name"}
+		}
+	},
+	"article" : {
+		"title":"article",
+		"singular":"article",
+		"plural":"articles",
+		"table_name":"tb_article",
+		"fields": {
+			"id":             		{ "type": "uuid", "autoCreate": true, "isPrimaryKey" : true},
+			"title":    			{ "type": "string", "nullable" : false, "maxSize" : 126, "title":"article title"},
+			"click_times":    		{ "type": "int64", "nullable" : false,  "defaultValue" : 0,"maxSize" : 10, "title":"click-times"},
+			"type_id ":     		{ "type": "string", "nullable" : false, "maxSize" : 64, "title":"article type id"},
+			"content": 				{ "type": "string", "nullable" : false, "defaultValue" : "", "title":"article content"}
+		}
+	}
+}
